@@ -34,10 +34,10 @@ public record DescribeTopicPartitionsResponseV0(
                 topicList.add(new Topic(
                         ErrorCode.UNKNOWN_TOPIC_OR_PARTITION,
                         requestTopic.name(),
-                        new UUID(0L, 0L),
-                        false,
+                        new UUID(Constant.DEFAULT_UUID_MOST_SIGN_BITS, Constant.DEFAULT_UUID_LEAST_SIG_BITS),
+                        Constant.DEFAULT_TOPIC_IS_INTERNAL,
                         Collections.emptyList(),
-                        0
+                        Constant.DEFAULT_TOPIC_AUTHORIZED_OPERATIONS
                 ));
             } else {
                 List<Record.Partition> recordPartitions = Kafka.getPartitionListByTopicId(recordTopic.uuid());
@@ -58,9 +58,9 @@ public record DescribeTopicPartitionsResponseV0(
                         ErrorCode.NONE,
                         recordTopic.name(),
                         recordTopic.uuid(),
-                        false,
+                        Constant.DEFAULT_TOPIC_IS_INTERNAL,
                         partitions,
-                        0
+                        Constant.DEFAULT_TOPIC_AUTHORIZED_OPERATIONS
                 ));
             }
         }

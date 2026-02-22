@@ -18,4 +18,8 @@ public class Constant {
     public static final Integer DEFAULT_LOG_APPEND_TIME_MS = -1;
     public static final Integer DEFAULT_NEW_OFFSET = -1;
     public static final Long DEFAULT_NULL_NEXT_CURSOR = -1L;
+    public static final Long DEFAULT_UUID_MOST_SIGN_BITS = 0L;
+    public static final Long DEFAULT_UUID_LEAST_SIG_BITS = 0L;
+    public static final Boolean DEFAULT_TOPIC_IS_INTERNAL = Boolean.FALSE;
+    public static final Integer DEFAULT_TOPIC_AUTHORIZED_OPERATIONS = 0;
 }
