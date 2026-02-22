@@ -17,4 +17,5 @@ public class Constant {
     public static final Integer DEFAULT_BASE_OFFSET = -1;
     public static final Integer DEFAULT_LOG_APPEND_TIME_MS = -1;
     public static final Integer DEFAULT_NEW_OFFSET = -1;
+    public static final Long DEFAULT_NULL_NEXT_CURSOR = -1L;
 }

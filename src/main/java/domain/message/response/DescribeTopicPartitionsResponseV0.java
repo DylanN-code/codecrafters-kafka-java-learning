@@ -1,5 +1,6 @@
 package domain.message.response;
 
+import constant.Constant;
 import domain.logdata.record.Record;
 import domain.message.Header;
 import domain.message.RequestBody;
@@ -71,7 +72,7 @@ public record DescribeTopicPartitionsResponseV0(
         dataOutput.writeInt((int) throttleTime.toMillis());
         dataOutput.writeCompactArray(topics, Topic::serialize);
         if (cursor == null) {
-            dataOutput.writeByte((byte) 0xff);
+            dataOutput.writeLong(Constant.DEFAULT_NULL_NEXT_CURSOR);
         } else {
             cursor.serialize(dataOutput);
         }
