@@ -11,6 +11,9 @@ about handling the network protocol, event loops, TCP sockets and more.
 **Note**: If you're viewing this repo on GitHub, head over to
 [codecrafters.io](https://codecrafters.io) to try the challenge.
 
+# Acknowledgement
+Big thanks to Caceresenzo for public repo [Codecrafters: Build your own Kafka in Java](https://github.com/Caceresenzo/codecrafters--build-your-own-kafka--java)
+
 # Passing the first stage
 
 The entry point for your Kafka implementation is in `src/main/java/Main.java`.
